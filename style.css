@@ -1,0 +1,465 @@
+:root {
+    --color: rgb(116, 17, 136);
+    --color-more: rgb(255, 85, 85);
+    --br: 15px;
+    --br-small: 10px;
+    --bg: #12163f;
+    --bg-more: #1b2154;
+    --color-text: #fff;
+    --shadow-color: black;
+}
+
+body.light {
+    --bg: #fff;
+    --bg-more: #ccc;
+    --color-text: #333;
+    --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.4;
+    background-color: var(--bg);
+    color: var(--color-text);
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    max-width: 100%;
+    /* Убираем отступ */
+    vertical-align: middle;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    border-radius: var(--br-small);
+    background-color: var(--bg);
+    border: 0;
+    padding: 25px 25px;
+    box-shadow: inset 4px 4px 5px var(--shadow-color);
+    color: var(--color-text);
+}
+
+:input:focus {
+    outline: 0;
+}
+
+.button {
+    font-size: 16px;
+    background-color: var(--color);
+    color: #fff;
+    border-radius: var(--br-small);
+    padding: 17px 30px;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.btn {
+    background-color: var(--bg-more);
+    color: var(--color-text);
+}
+
+
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.indent {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* popup */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+}
+
+.popup_content {
+    width: 450px;
+    padding: 45px;
+    box-sizing: border-box;
+    border-radius: var(--br);
+    background-color: var(--bg-more);
+    position: relative;
+
+}
+
+
+.popup_close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    transition: 1s;
+}
+
+.popup_close:hover {
+    background-color: var(--color-more);
+    border-radius: 100%;
+    color: #fff;
+    transform: rotate(360deg)
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.tab {
+    background-color: var(--bg-more);
+    padding: 15px 25px;
+    margin: 10px;
+}
+
+.tab.active {
+    background: var(--color);
+}
+
+.tab_content {
+    border: 2px solid var(--color-text);
+    padding: 45px;
+    display: none;
+}
+
+.tab_content.active {
+    display: block;
+}
+
+/* Header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgb(185, 89, 204);
+}
+
+/* logo */
+
+.logo_title {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.logo_subtitle {
+    opacity: 0.5;
+}
+
+.header_right {
+    display: flex;
+}
+
+.settings {
+    display: flex;
+    margin-right: 50px;
+    align-items: center;
+}
+
+/* setting */
+.setting {
+    background-color: var(--bg-more);
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 70px;
+    padding: 5px;
+    border-radius: 45px;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 4px var(--shadow-color);
+}
+
+.setting_btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: var(--color);
+    transition: 500ms;
+}
+
+/* account */
+.account .btn {
+    margin-right: 15px;
+}
+
+.setting_tema .setting_btn,
+.setting_display .setting_btn {
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.setting_tema .setting_btn {
+    background-image: url(img/tema-dark.png);
+}
+
+.setting_display .setting_btn {
+    background-image: url(img/view-line.png);
+}
+
+body.light .setting_tema .setting_btn {
+    background-image: url(img/tema-light.png);
+    transform: translateX(40px)
+}
+
+body.display_blocks .setting_display .setting_btn {
+    background-image: url(img/view-block.png);
+    transform: translateX(40px)
+}
+
+/* Add task */
+.add_task_form {
+    background-color: var(--bg-more);
+    border-radius: var(--br);
+    padding: 25px;
+    display: flex;
+}
+
+.input_count_day {
+    width: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tasks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* All task */
+.task {
+    background-color: var(--bg-more);
+    padding: 25px;
+    border-radius: var(--br);
+
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--bg-more);
+    margin: 15px 15px 25px 15px;
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+}
+
+/* Последнему элементу задаем псевдо класс margin-bottom=0px */
+
+
+body.display_blocks .task {
+    width: calc(50% - 30px);
+}
+
+.done {
+    width: 35px;
+    height: 35px;
+    border-radius: var(--br-small);
+    border: 2px solid var(--color-text);
+    cursor: pointer;
+
+}
+
+
+
+.heading {
+    font-size: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    flex-grow: 1;
+    padding: 10px
+}
+
+.date_start {
+    padding: 16px 10px;
+}
+
+.count_day {
+    margin-left: 25px;
+    margin-right: 70px;
+    padding: 16px 10px;
+}
+
+body.display_blocks .count_day,
+body.display_blocks .heading {
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+body.display_blocks .heading {
+    font-size: 20px;
+}
+
+.edit,
+.delete {
+    width: 45px;
+    height: 45px;
+    border-radius: var(--br-small);
+    /* размер картинки в проценах */
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.edit {
+    background-color: var(--color);
+    background-image: url(img/edit.png);
+}
+
+.delete {
+    background-color: var(--color-more);
+    background-image: url(img/delete.png);
+}
+
+.edit:hover {
+    box-shadow: 0 15px 30px var(--color);
+}
+
+.delete:hover {
+    box-shadow: 0 15px 35px var(--color-more);
+}
+
+.edit:active,
+.delete:active {
+    transform: scale(0.8);
+}
+
+.task.check {
+    background: none;
+
+}
+
+.task.check .done {
+    background-color: var(--color);
+    background-image: url(img/done.png);
+    border: 2px solid var(--color);
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation-name: done;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes done {
+    10% {
+        box-shadow: 5px 5px 20px red;
+        transform: scale(0.5);
+    }
+}
+
+
+
+.task.editable .heading,
+.task.editable .date_start,
+.task.editable .count_day {
+    background-color: var(--bg);
+    border-radius: var(--br-small);
+}
+
+.task.editable .heading,
+.task.editable .date_start,
+.task.editable .count_day {
+    outline: 2px dashed var(--bg-more);
+}
+
+
+
+
+/* Анимация при удалении */
+.delete_start {
+    animation-name: delete;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes delete {
+    50% {
+        transform: translateX(500px);
+        opacity: 0;
+        margin-bottom: 25px;
+    }
+
+    100% {
+        transform: translateX(500px);
+        opacity: 0;
+        margin-bottom: -109px;
+    }
+}
+
+/* Сделать анимацию при нажатии на галочку что то происходит  */

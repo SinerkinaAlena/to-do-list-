@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List - список задач</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="light">
+    <header class="header">
+        <div class="container">
+
+            <div class="logo">
+                <p class="logo_title">ToDo List</p>
+                <p class="logo_subtitle">Список задач</p>
+            </div>
+
+            <div class="header_right">
+                <div class="settings">
+                    <div class="setting setting_tema">
+                        <div class="setting_btn"></div>
+                    </div>
+
+                    <div class="setting  setting_display">
+                        <div class="setting_btn"></div>
+                    </div>
+                </div>
+                <div class="account">
+                    <a href="" class="button btn sign_up">Регистрация</a>
+                    <a href="" class="button login">Вход</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="add_task">
+        <div class="indent container">
+            <h2>Добавить задачу</h2>
+            <form action="" class="add_task_form">
+                <input type="text" placeholder="Введите задачу" name="task" class="input_task">
+                <input type="number" placeholder="Количество дней" name="count_day" class="input_count_day">
+                <button class="button">Добавить задачу</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="all_tasks">
+        <div class="indent container">
+            <h2>Все задачи</h2>
+
+            <div class="tasks">
+                <!-- <div class="task check editable">
+                    <div class="done"></div>
+                    <div class="heading" contenteditable="true">Купить молоко</div>
+                    <div class="date_start" contenteditable="true">10 сентября 2022</div>
+                    <div class="count_day" contenteditable="true">5</div>
+                    <div class="edit"></div>
+                    <div class="delete"></div> -->
+            </div>
+
+            <div class="tasks">
+                <!-- <div class="task editable">
+                        <div class="done"></div>
+                        <div class="heading">Купить молоко</div>
+                        <div class="date_start">10 сентября 2022</div>
+                        <div class="count_day">5</div>
+                        <div class="edit"></div>
+                        <div class="delete"></div> -->
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+
+    <!-- <section class='block_1'>
+        <div class="indent container">
+
+            <div class="tabs">
+                <div class="tab active">Разработка сайтов</div>
+                <div class="tab">Продвижение сайтов</div>
+                <div class="tab">Поддержка сайтов</div>
+            </div>
+            <div class="tab_content active">
+                <h1>Разработка сайтов</h1>
+            </div>
+            <div class="tab_content ">
+                <h1>Продвижение сайтов</h1>
+            </div>
+            <div class="tab_content ">
+                <h1>Поддержка сайтов</h1>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="block_2">
+        <div class="indent container">
+            <div class="tabs">
+                <div class="tab active">Элемент 1</div>
+                <div class="tab">Элемент 2</div>
+
+            </div>
+            <div class="tab_content active">
+                <h1>Элемент 1</h1>
+            </div>
+            <div class="tab_content ">
+                <h1>Элемент 2</h1>
+            </div> -->
+
+
+
+    </div>
+    </section>
+    <!-- Popup- всплывающее окно -->
+    <div class="popup">
+        <!-- затемняющий фон -->
+        <div class="popup_bg close"></div>
+        <!-- окно -->
+        <div class="popup_content">
+            <h2>Hello</h2>
+            <div class="popup_close close">x</div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="classes/Tab.js"></script>
+    <script src="classes/Task.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
